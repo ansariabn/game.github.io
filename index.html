@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        background-image: url(Symbol\ 3\ copy.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    .image-3 img {
+        width: 150px;
+        height: 150px;
+    }
+    .assemble {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 10px;
+        right: 60px;
+        color: #fff;
+        padding: 10px
+    }
+
+    .left {
+        position: relative;
+        left: calc(70px);
+        bottom: 15px;
+    }
+
+    .right {
+        position: relative;
+        right: calc(10px, 10px);
+        
+        width: 100px;
+        height: 150px;
+        transition: top linear 15s;
+    }
+
+    .right-1 {
+        position: relative;
+        top: 70px;
+        right: calc(15px, 15px);
+        transition: top .1s;
+    }
+    .right-2 {
+        top: 110px;
+        right: calc(15px, 15px);
+    }
+
+    .container {
+        width: 100%;
+        margin-bottom: -20px;
+        margin-left: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+    }
+    .balloon {
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        animation: fly 10s linear;
+        transform: translatex(-90%);
+       
+    }
+
+    @keyframes fly {
+         0% {
+      transform: translatex(-1%) translateY(-1px);
+    }  
+
+        100% {
+      transform: translateX(calc(200% + (random() - 100px) * 400px)) translateY(calc(80% - (random() * 3px)));
+    } 
+
+}
+</style>
+
+<body>
+    <div class="assemble ">
+        <div class="imges-5 image-3">
+            <div class="container " id="container">
+                <div class="balloon" id="balloon"></div>
+            </div>
+            <div class="left">
+                <img src="Symbol 320002.png" alt>
+            </div>
+        </div>
+        <div class="imges-5 image-3">
+            <div class="right-1">
+                <img src="Symbol 320001.png" alt>
+            </div>
+            <div class="imges-1 right">
+                <img src="Symbol 320003.png" alt>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
